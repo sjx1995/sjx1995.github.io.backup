@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>HTML5 学习笔记（1） | Sunly's Blog</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/4.2.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/blog/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/blog/favicon.ico"><link rel="apple-touch-icon" href="/blog/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/blog/apple-touch-icon.png"><!--pace插件--><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js?=1.02"></script><link rel="stylesheet" type="text/css" href="/css/pace.css?=1.05"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">HTML5 学习笔记（1）</h1><a id="logo" href="/blog/.">Sunly's Blog</a><p class="description">Better Late Than Never</p></div><div id="nav-menu"><a href="/blog/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/blog/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/blog/history/"><i class="fa fa-history"> 历史</i></a><a href="/blog/plus1/"><i class="fa fa-plus"> ONE</i></a><a href="/blog/about/"><i class="fa fa-user"> 关于</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">HTML5 学习笔记（1）</h1><div class="post-meta">Sep 7, 2015<span> | </span><span class="category"><a href="/blog/categories/学习笔记/">学习笔记</a></span><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="post-content"><p>HTML 是一种标记语言，<br>其标记应用于文档的元素其存在形式。<br><a id="more"></a></p>
+<h1 id="元素"><a href="#元素" class="headerlink" title="元素"></a>元素</h1><p>HTML元素示例：<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">I like &lt;<span class="meta">code</span>&gt;HTML&lt;/<span class="meta">code</span>&gt; .</div></pre></td></tr></table></figure></p>
+<p>该元素包括三个部分：</p>
+<ul>
+<li>开始标签：<code>&lt;code&gt;</code></li>
+<li>内容：<code>HTML</code></li>
+<li>结束标签：<code>&lt;/code&gt;</code><br>  元素名不区分大小写。<br>浏览器不会显示元素标签，他的任务是解读HTML文档。</li>
+</ul>
+<h2 id="空元素"><a href="#空元素" class="headerlink" title="空元素"></a>空元素</h2><p>开始元素和结束元素之间不一定要有内容，元素为空时可能没有意义，但是是有效的HTML代码。<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">I like &lt;<span class="meta">code</span>&gt;&lt;/<span class="meta">code</span>&gt;HTML .</div></pre></td></tr></table></figure></p>
+<h2 id="自闭和标签"><a href="#自闭和标签" class="headerlink" title="自闭和标签"></a>自闭和标签</h2><p>空元素可以简洁的用一个标签表示。<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">I like &lt;<span class="meta">code</span>/&gt;HTML .</div></pre></td></tr></table></figure></p>
+<h2 id="虚元素"><a href="#虚元素" class="headerlink" title="虚元素"></a>虚元素</h2><p><code>虚元素</code>：只能用一个标签表示，在其中放任何内容都不符合HTML规范。<br>虚元素有两种表示方法：</p>
+<ul>
+<li>用单个标签表示虚元素：<code>&lt;hr&gt;</code></li>
+<li>用空元素结构表示虚元素：<code>&lt;he /&gt;</code></li>
+</ul>
+<h1 id="元素属性"><a href="#元素属性" class="headerlink" title="元素属性"></a>元素属性</h1><p>元素可以用<code>属性</code>进行配置。<br>元素属性示例：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">I like <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/test.html"</span>&gt;</span>HTML<span class="tag">&lt;/<span class="name">a</span>&gt;</span> .</div></pre></td></tr></table></figure></p>
+<p>属包括两个部分：</p>
+<ul>
+<li>属性名：<code>href</code></li>
+<li>属性值：<code>&quot;/test.html&quot;</code><br>属性只能用在开始标签或单个标签。<br><code>全局属性</code>：可用于所有html元素，比如：<code>id</code>、<code>class</code>。<br><code>专有元素</code>：提供特有配置信息，<code>href</code>属性就限于<code>a</code>元素。</li>
+</ul>
+<h2 id="一个元素应用于多个属性"><a href="#一个元素应用于多个属性" class="headerlink" title="一个元素应用于多个属性"></a>一个元素应用于多个属性</h2><p>一个元素用在多个属性上，用空格隔开。</p>
+<h2 id="布尔属性"><a href="#布尔属性" class="headerlink" title="布尔属性"></a>布尔属性</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">enter name:&lt;<span class="selector-tag">input</span> disabled&gt;</div></pre></td></tr></table></figure>
+<p>例子中的<code>disabled</code>就是布尔属性，元素中只添加了该属性名称。<code>disabled</code>属性阻止用户输入数据。<br>布尔属性指定一个空字符串<code>&quot;&quot;</code>或属性名称字符串<code>disabled=&quot;disabled&quot;</code>作为其值也有同样效果。</p>
+<h2 id="自定义属性"><a href="#自定义属性" class="headerlink" title="自定义属性"></a>自定义属性</h2><p>这类属性之前添加前缀<code>data-</code>，避免和HTML未来版本中属性产生冲突、<br>浏览器应该忽略不认识的自定义属性。</p>
+<h1 id="HTML文档"><a href="#HTML文档" class="headerlink" title="HTML文档"></a>HTML文档</h1><h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="父元素、子元素、后代元素、兄弟元素"><a href="#父元素、子元素、后代元素、兄弟元素" class="headerlink" title="父元素、子元素、后代元素、兄弟元素"></a>父元素、子元素、后代元素、兄弟元素</h2><p>父元素：包含一个元素的元素是被包含元素的<code>父元素</code>，一个元素只有一个父元素。<br>子元素：被直接包含元素是包含元素的<code>子元素</code>，一个元素可以有多个子元素。<br>后代元素：所有被包含的元素称为<code>后代元素</code>,子元素是关系最近的<code>后代元素</code>.<br>兄弟元素：具有同一个父元素的元素互为<code>兄弟元素</code>。</p>
+<h2 id="元素类型"><a href="#元素类型" class="headerlink" title="元素类型"></a>元素类型</h2><p>元素类型分为三大类：元数据元素、流元素、短语元素。<br>但有些元素不包括在上述三种元素中，没有意义或使用情景有限，比如：<code>&lt;li&gt;</code>，它只能有三种父元素<code>&lt;ol&gt;</code>、<code>&lt;ul&gt;</code>、<code>&lt;menu&gt;</code>。</p>
+<h3 id="元数据元素"><a href="#元数据元素" class="headerlink" title="元数据元素"></a>元数据元素</h3><p>用来构建HTML文档的基本结构，以及如何向浏览器</p>
+<h3 id="流元素和短语元素"><a href="#流元素和短语元素" class="headerlink" title="流元素和短语元素"></a>流元素和短语元素</h3><p>确定一个元素合法的父元素和子元素范围。<br>短语元素是HTML的基本成分，所有短语元素都是流元素，但并非所有流元素都是短语元素。</p>
+<h1 id="HTML实体"><a href="#HTML实体" class="headerlink" title="HTML实体"></a>HTML实体</h1><p>一些特殊字符不希望进行HTML处理时，需要用到html实体。</p>
+<table>
+<thead>
+<tr>
+<th>字符</th>
+<th>描述</th>
+<th>实体名称</th>
+<th>实体编号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>空格</td>
+<td><code>&amp;nbsp;</code></td>
+<td><code>&amp;#160;</code></td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>小于号</td>
+<td><code>&amp;lt;</code></td>
+<td><code>&amp;#60;</code></td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>大于号</td>
+<td><code>&amp;gt;</code></td>
+<td><code>&amp;#62;</code></td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>和号</td>
+<td><code>&amp;amp;</code></td>
+<td><code>&amp;#38;</code></td>
+</tr>
+<tr>
+<td>“</td>
+<td>引号</td>
+<td><code>&amp;quot;</code></td>
+<td><code>&amp;#34;</code></td>
+</tr>
+<tr>
+<td>‘</td>
+<td>撇号</td>
+<td><code>&amp;apos;</code></td>
+<td><code>&amp;#39;</code></td>
+</tr>
+<tr>
+<td>￠</td>
+<td>分（cent）</td>
+<td><code>&amp;cent;</code></td>
+<td><code>&amp;#162;</code></td>
+</tr>
+<tr>
+<td>£</td>
+<td>镑（pound）</td>
+<td><code>&amp;pound;</code></td>
+<td><code>&amp;#163;</code></td>
+</tr>
+<tr>
+<td>¥</td>
+<td>元（yen）</td>
+<td><code>&amp;yen;</code></td>
+<td><code>&amp;#165;</code></td>
+</tr>
+<tr>
+<td>€</td>
+<td>欧元（euro）</td>
+<td><code>&amp;euro;</code></td>
+<td><code>&amp;#8364;</code></td>
+</tr>
+<tr>
+<td>§</td>
+<td>小节</td>
+<td><code>&amp;sect;</code></td>
+<td><code>&amp;#167;</code></td>
+</tr>
+<tr>
+<td>©</td>
+<td>版权（copyright）</td>
+<td><code>&amp;copy;</code></td>
+<td><code>&amp;#169;</code></td>
+</tr>
+<tr>
+<td>®</td>
+<td>注册商标</td>
+<td><code>&amp;reg;</code></td>
+<td><code>&amp;#174;</code></td>
+</tr>
+<tr>
+<td>™</td>
+<td>商标</td>
+<td><code>&amp;trade;</code></td>
+<td><code>&amp;#8482;</code></td>
+</tr>
+<tr>
+<td>×</td>
+<td>乘号</td>
+<td><code>&amp;times;</code></td>
+<td><code>&amp;#215;</code></td>
+</tr>
+<tr>
+<td>÷</td>
+<td>除号</td>
+<td><code>&amp;divide;</code></td>
+<td><code>&amp;#247;</code></td>
+</tr>
+</tbody>
+</table>
+<h1 id="全局属性"><a href="#全局属性" class="headerlink" title="全局属性"></a>全局属性</h1><p>用来配置所有元素的共有行为。</p>
+<h3 id="accesskey-属性"><a href="#accesskey-属性" class="headerlink" title="accesskey 属性"></a>accesskey 属性</h3><p>设定一个或几个选择页面元素的快捷键。<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">input</span> type=<span class="string">'text'</span> id=<span class="string">'text'</span> accesskey=<span class="string">'t'</span>&gt;</div></pre></td></tr></table></figure></p>
+<h3 id="class-属性"><a href="#class-属性" class="headerlink" title="class 属性"></a>class 属性</h3><p>用来将元素归类，通常为了找出一个或一类元素来应用CSS样式。<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;div <span class="keyword">class</span>=<span class="string">'class1 class2'</span>&gt;</div></pre></td></tr></table></figure></p>
+<p>一个元素可以归入多个类别，所以class属性值中用用空格隔开的多个值即可。</p>
+<h3 id="contenteditable-属性"><a href="#contenteditable-属性" class="headerlink" title="contenteditable 属性"></a>contenteditable 属性</h3><p>让用户能够修改页面上的内容。<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">p</span> contenteditable=<span class="string">'true'</span>&gt;</div></pre></td></tr></table></figure></p>
+<h3 id="contextmenu-属性"><a href="#contextmenu-属性" class="headerlink" title="contextmenu 属性"></a>contextmenu 属性</h3><p>为元素设定快捷菜单。</p>
+<pre><code>目前只有Firefox支持
+</code></pre><h3 id="dir-属性"><a href="#dir-属性" class="headerlink" title="dir 属性"></a>dir 属性</h3><p>规定元素中文字的方向。<br>有两个有效的值：</p>
+<ul>
+<li>ltr：用于从左到右的文字（靠左显示）</li>
+<li>rtl：用于从右往左的文字（靠右显示）</li>
+</ul>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">p</span> dir=<span class="string">'rtl'</span>&gt;</div></pre></td></tr></table></figure>
+<h3 id="draggable-属性"><a href="#draggable-属性" class="headerlink" title="draggable 属性"></a>draggable 属性</h3><p>用于元素拖放。</p>
+<h3 id="dropzone-属性"><a href="#dropzone-属性" class="headerlink" title="dropzone 属性"></a>dropzone 属性</h3><p>用于元素拖放，与draggable属性搭配使用。</p>
+<h3 id="hidden-属性"><a href="#hidden-属性" class="headerlink" title="hidden 属性"></a>hidden 属性</h3><p>布尔类型，表示相关元素无需关注。</p>
+<h3 id="id-属性"><a href="#id-属性" class="headerlink" title="id 属性"></a>id 属性</h3><p>给元素分配一个唯一标识符。</p>
+<h3 id="lang-属性"><a href="#lang-属性" class="headerlink" title="lang 属性"></a>lang 属性</h3><p>说明元素内容使用的语言。</p>
+<h3 id="spellcheck-属性"><a href="#spellcheck-属性" class="headerlink" title="spellcheck 属性"></a>spellcheck 属性</h3><p>布尔类型，让浏览器对元素内容进行拼写检查。</p>
+<h3 id="style-属性"><a href="#style-属性" class="headerlink" title="style 属性"></a>style 属性</h3><p>用于直接在元素身上定义CSS样式。</p>
+<h3 id="tabindex-属性"><a href="#tabindex-属性" class="headerlink" title="tabindex 属性"></a>tabindex 属性</h3><p>使用<code>TAB</code>键可以在网页内各元素切换，tabindex属性可以改变默认的移动顺序。<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">input</span> type=<span class="string">'submit'</span> tabindex=<span class="string">'1'</span>&gt;</div></pre></td></tr></table></figure></p>
+<h3 id="title-属性"><a href="#title-属性" class="headerlink" title="title 属性"></a>title 属性</h3><p>提供元素的额外信息。<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">p</span> tittle=<span class="string">'text'</span>&gt;</div></pre></td></tr></table></figure></p>
+<p>鼠标指在p元素上将会显示text。</p>
+<h1 id="XHTML"><a href="#XHTML" class="headerlink" title="XHTML"></a>XHTML</h1><ul>
+<li>XHTML 元素必须正确嵌套</li>
+<li>XHTML 元素必须始终关闭</li>
+<li>XHTML 元素必须小写</li>
+<li>XHTML 文档必须有一个根元素</li>
+<li>用id代替name</li>
+<li>使用”/“前加空格</li>
+</ul>
+<hr>
+<p></p><p align="right"><br>By.Sunly<br>Hangzhou Fall<br></p><br><br><p></p>
+</div><script type="text/javascript" src="/blog/js/share.js?v=0.0.0" async></script><a data-url="http://sunly.in/blog/blog/2015/09/07/html-1/" data-id="ciy872grg0000p4ljecyv2tzs" class="article-share-link">分享到</a><div class="tags"><a href="/blog/tags/学习笔记/">学习笔记</a><a href="/blog/tags/HTML5/">HTML5</a></div><div class="post-nav"><a href="/blog/2015/09/09/css-1/" class="pre">CSS3 学习笔记（1）</a><a href="/blog/2015/07/18/ingress-cf/" class="next">关于Ingress多重CF</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Ingress/">Ingress</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/书籍/">书籍</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/学习笔记/">学习笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/技术/">技术</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/blog/tags/blog/" style="font-size: 15px;">blog</a> <a href="/blog/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/blog/tags/Ingress/" style="font-size: 15px;">Ingress</a> <a href="/blog/tags/IngressFS/" style="font-size: 15px;">IngressFS</a> <a href="/blog/tags/投资/" style="font-size: 15px;">投资</a> <a href="/blog/tags/书籍推荐/" style="font-size: 15px;">书籍推荐</a> <a href="/blog/tags/markdown/" style="font-size: 15px;">markdown</a> <a href="/blog/tags/VPS/" style="font-size: 15px;">VPS</a> <a href="/blog/tags/搬瓦工/" style="font-size: 15px;">搬瓦工</a> <a href="/blog/tags/net-speeder/" style="font-size: 15px;">net_speeder</a> <a href="/blog/tags/vim-快捷键/" style="font-size: 15px;">vim 快捷键</a> <a href="/blog/tags/HTTPS/" style="font-size: 15px;">HTTPS</a> <a href="/blog/tags/fedora/" style="font-size: 15px;">fedora</a> <a href="/blog/tags/chrome/" style="font-size: 15px;">chrome</a> <a href="/blog/tags/ubuntu/" style="font-size: 15px;">ubuntu</a> <a href="/blog/tags/chromium/" style="font-size: 15px;">chromium</a> <a href="/blog/tags/http权威指南/" style="font-size: 15px;">http权威指南</a> <a href="/blog/tags/HTTP报文/" style="font-size: 15px;">HTTP报文</a> <a href="/blog/tags/学习笔记/" style="font-size: 15px;">学习笔记</a> <a href="/blog/tags/链接管理/" style="font-size: 15px;">链接管理</a> <a href="/blog/tags/HTML5/" style="font-size: 15px;">HTML5</a> <a href="/blog/tags/CSS3/" style="font-size: 15px;">CSS3</a> <a href="/blog/tags/url与资源/" style="font-size: 15px;">url与资源</a> <a href="/blog/tags/MyEclipse/" style="font-size: 15px;">MyEclipse</a> <a href="/blog/tags/contect-root/" style="font-size: 15px;">contect-root</a> <a href="/blog/tags/javascript/" style="font-size: 15px;">javascript</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/blog/2017/01/17/http-connection/">链接管理</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/01/15/http-message/">HTTP报文</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2017/01/15/http-url/">url与资源</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2016/12/26/edit-project-name/">MyEclipse2015/2016中修改web context-root</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2016/11/18/vim-hotkey/">vim基本操作</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2016/10/28/https-for-github-pages/">为Github Pages开启HTTPS</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2016/06/08/net-speed/">net_speeder安装及安装脚本</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2015/12/21/fedora-chrome/">Fedora 安装 chrome</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2015/12/16/ubuntu-chromium-video/">ubuntn下chromium不能播放视频</a></li><li class="post-list-item"><a class="post-list-link" href="/blog/2015/09/18/html-4/">HTML5 学习笔记（4）</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/blog/." rel="nofollow">Sunly's Blog.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.	</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/blog/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/blog/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/blog/css/jquery.fancybox.css?v=0.0.0"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?2e6ea6bf2d3e6118ff0f6992a156c44f";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+  })();
+</script><script type="text/javascript" src="/blog/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/blog/js/smartresize.js?v=0.0.0"></script></div></body></html>
