@@ -1,0 +1,115 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>CSS3 学习笔记（3） | Sunly's Blog</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/4.2.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><!--pace插件--><script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js?=1.02"></script><link rel="stylesheet" type="text/css" href="/css/pace.css?=1.05"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">CSS3 学习笔记（3）</h1><a id="logo" href="/.">Sunly's Blog</a><p class="description">Better Late Than Never</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/history/"><i class="fa fa-history"> 历史</i></a><a href="/plus1/"><i class="fa fa-plus"> ONE</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">CSS3 学习笔记（3）</h1><div class="post-meta">Oct 8, 2015<span> | </span><span class="category"><a href="/categories/学习笔记/">学习笔记</a></span><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="post-content"><p>盒子是CSS的基础概念，我们需要使用它来配置元素的外观以及文档的整体布局。<br><a id="more"></a></p>
+<h1 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h1><p><img src="http://www.w3school.com.cn/i/ct_boxmodel.gif" alt="">    </p>
+<h2 id="padding"><a href="#padding" class="headerlink" title="padding"></a>padding</h2><p><code>padding</code>属性定义了元素的内边距<br>百分比和包含块的宽度有关，高度不考虑在内<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">p</span> &#123;</div><div class="line">	<span class="comment">//顶部内边距10px，左右内边距20px，下边内边距30px</span></div><div class="line">	<span class="attribute">padding</span>: <span class="number">10px</span> <span class="number">20px</span> <span class="number">30px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="margin"><a href="#margin" class="headerlink" title="margin"></a>margin</h2><p><code>margin</code>属性定义了原色的外边距<br>百分比和包含块的宽度有关</p>
+<h2 id="width-和-height"><a href="#width-和-height" class="headerlink" title="width 和 height"></a>width 和 height</h2><p><code>width</code>和<code>height</code>属性可以控制元素的尺寸<br><code>min-width</code>和<code>min-height</code>属性为元素设置最小尺寸<br><code>max-width</code>和<code>max-height</code>属性为元素设置最大尺寸<br>百分比是根据包含块的宽度来计算的</p>
+<h2 id="box-sizing"><a href="#box-sizing" class="headerlink" title="box-sizing"></a>box-sizing</h2><p><code>box-sizing</code>属性以确切的方式定义适应某个区域的具体内容<br>盒子的标准模型的宽是<code>content</code>+<code>border-width</code>+<code>padding</code>，使用<code>box-sizing</code>属性可以将<code>border-width</code>和<code>padding</code>计算到设置的<code>width</code>中，比如设置的<code>width</code>为100px，<code>padding-width</code>为10px，使用<code>box-sizing</code>属性使宽度仍为100px而不是120px。</p>
+<h2 id="overflow"><a href="#overflow" class="headerlink" title="overflow"></a>overflow</h2><p>当内容太多，容器过小，内容就会溢出。使用<code>overflow</code>可以改变溢出行为。</p>
+<ul>
+<li>overflow：简写属性</li>
+<li>overflow-x：设置水平方向溢出方式</li>
+<li>overflow-y：设置垂直方向溢出方式<br>属性的值：</li>
+<li>visible：默认值，会溢出显示</li>
+<li>auto：自行处理，通常内容被裁剪会有滚动条</li>
+<li>hidden：多余部分直接被忽略</li>
+<li>scroll：显示滚动条查看更多内容</li>
+<li>inherit：从父元素继承</li>
+</ul>
+<h2 id="visibility"><a href="#visibility" class="headerlink" title="visibility"></a>visibility</h2><p><code>visibility</code>可以控制元素的可见性，</p>
+<p>属性的值：</p>
+<ul>
+<li>visible：默认值，元素可见</li>
+<li>hidden：元素不可见，但是占据空间</li>
+<li>collapse：元素不可见，且不占据空间，只能应用到相表相关元素（Google Chrome 55 暂不支持）</li>
+</ul>
+<h2 id="display"><a href="#display" class="headerlink" title="display"></a>display</h2><p><code>display</code>属性可以改变元素盒类型，相应的会改变元素在页面上的布局方式<br>属性的值：</p>
+<ul>
+<li>inline：创建一个行内元素，使用inline属性浏览器会忽略width、height、margin</li>
+<li>block：创建一个块级元素，块级元素会在垂直方向跟周围元素有所区别</li>
+<li>inline-block：创建一个行内-块级元素，元素和周围元素会并列显示，但不会忽略width、height、margin属性</li>
+<li>run-in：盒子类型取决于周围元素</li>
+<li>none：隐藏元素，元素不占据空间</li>
+</ul>
+<h2 id="float"><a href="#float" class="headerlink" title="float"></a>float</h2><p><code>float</code>属性会创建浮动盒，浮动盒会将元素边界移动到包含块或另一个浮动盒的边界<br>属性的值：</p>
+<ul>
+<li>left：移动盒至包含块左边界或另一浮动盒元素右边界</li>
+<li>right：移动盒至包含块右边界或另一浮动盒元素左边界</li>
+<li>none：元素位置固定</li>
+</ul>
+<h2 id="clear"><a href="#clear" class="headerlink" title="clear"></a>clear</h2><p>如果设置多个浮动元素，默认情况下会堆叠显示。<br><code>clear</code>属性使浮动元素的一个或两个边界不能挨着另一个浮动元素<br>属性的值：</p>
+<ul>
+<li>none：可以紧挨浮动元素</li>
+<li>left：左边不能挨着浮动元素</li>
+<li>right：右边不能挨着浮动元素</li>
+<li>both：两边都不能挨着浮动元素</li>
+</ul>
+<h1 id="创建布局"><a href="#创建布局" class="headerlink" title="创建布局"></a>创建布局</h1><h2 id="定位内容"><a href="#定位内容" class="headerlink" title="定位内容"></a>定位内容</h2><p><code>position</code>属性设置了元素的定位方法<br><code>left</code>、<code>top</code>、<code>right</code>、<code>bottom</code>属性定位元素偏移量<br><code>position</code>属性的值：</p>
+<ul>
+<li>static：默认值，没有定位，忽略top、left、z-index等</li>
+<li>absolute：生成绝对定位元素，相对于position不为static的最近的祖先元素进行定位</li>
+<li>relative：生成相对定位元素，相对于其正常位置定位</li>
+<li>fixed：生成绝对定位元素，相对于浏览器窗口进行定位</li>
+<li>inherit：从父元素继承<br><code>z-index</code>属性指定元素显示的层叠顺序，属性的值是数值，值越小，越在底部</li>
+</ul>
+<h2 id="column"><a href="#column" class="headerlink" title="column"></a>column</h2><p><code>column</code>属性使内容多列分布，类似于报纸排版<br>使用<code>column-count</code>指定列数或者<code>column-width</code>指定列宽，以便内容在垂直的多列中分布</p>
+<h2 id="弹性盒布局-FlexBox"><a href="#弹性盒布局-FlexBox" class="headerlink" title="弹性盒布局(FlexBox)"></a>弹性盒布局(FlexBox)</h2><p>参考资料：</p>
+<ul>
+<li><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="external">Flex 布局教程:语法篇 - 阮一峰的网络日志</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2015/07/flex-examples.html" target="_blank" rel="external">Flex 布局教程:实例篇 - 阮一峰的网络日志</a></li>
+</ul>
+<p>弹性布局可以更好的支持流动界面。<br>将任意容器指定为flex布局：<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">	<span class="attribute">display</span>: flex;</div><div class="line">	<span class="comment">//webkit内核浏览器加上厂商前缀</span></div><div class="line">	<span class="attribute">display</span>: -webkit-flex;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>将行内元素指定为flex布局：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.p</span> &#123;</div><div class="line">	<span class="attribute">display</span>: inline-flex;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>设置为<code>flex</code>属性后子元素的<code>float</code>、<code>clear</code>、<code>vertical-align</code>属性将失效</p>
+<h3 id="flex布局基本概念"><a href="#flex布局基本概念" class="headerlink" title="flex布局基本概念"></a>flex布局基本概念</h3><p>采用flex布局的元素称为flex容器，他的所有子元素成为容器成员。<br><img src="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071004.png" alt=""><br>容器默认有两个轴，水平的主轴和垂直的交叉轴，项目默认沿主轴排列</p>
+<h3 id="容器的属性"><a href="#容器的属性" class="headerlink" title="容器的属性"></a>容器的属性</h3><h4 id="flex-direction"><a href="#flex-direction" class="headerlink" title="flex-direction"></a>flex-direction</h4><p>确定主轴(main axis)的方向<br>属性的值：</p>
+<ul>
+<li>row：默认值，主轴为水平方向，左为起点</li>
+<li>row-reverse：主轴为水平方向，右为起点</li>
+<li>column：主轴为垂直方向，上为起点</li>
+<li>column-reverse：主轴为垂直方向，下为起点</li>
+</ul>
+<h4 id="flex-wrap"><a href="#flex-wrap" class="headerlink" title="flex-wrap"></a>flex-wrap</h4><p>默认情况下项目排列在一条主轴上，如果项目过多需要还行，<code>flex-wrap</code>规定如何换行<br>属性的值：</p>
+<ul>
+<li>nowrap：不换行</li>
+<li>wrap：换行，第一行在上</li>
+<li>wrap-reverse：换行，第一行在下</li>
+</ul>
+<h4 id="justify-content"><a href="#justify-content" class="headerlink" title="justify-content"></a>justify-content</h4><p>定义项目在主轴上的对齐方式<br>属性的值：</p>
+<ul>
+<li>flex-start：左对齐，默认值</li>
+<li>flex-end：右对齐</li>
+<li>content：居中</li>
+<li>space-between：两端对齐，项目之间的间隔相等</li>
+<li>space-around：每个项目两侧间隔相等</li>
+</ul>
+<h4 id="align-items"><a href="#align-items" class="headerlink" title="align-items"></a>align-items</h4><p>定义项目在交叉轴上的对齐方式<br>属性的值：</p>
+<ul>
+<li>stretch：将占满整个容器高度，默认值</li>
+<li>flex-star：上对齐</li>
+<li>flex-end：下对齐</li>
+<li>conter：垂直居中</li>
+<li>baseline：项目第一行文字的基线对齐</li>
+</ul>
+<h4 id="align-content"><a href="#align-content" class="headerlink" title="align-content"></a>align-content</h4><p>属性定义多根轴线情况下的对齐方式，如果只有一根轴线属性无效<br>属性的值：</p>
+<ul>
+<li>stretch：将占满整个交叉轴，默认值</li>
+<li>flex-start：与交叉轴起点对齐</li>
+<li>flex-end：与交叉轴终点对齐</li>
+<li>center：与交叉轴中点对齐</li>
+<li>space-between：与交叉轴两端对齐，间隔相等</li>
+<li>space-around：每根轴线两端的间隔都相等</li>
+</ul>
+<h3 id="项目的属性"><a href="#项目的属性" class="headerlink" title="项目的属性"></a>项目的属性</h3><h4 id="order"><a href="#order" class="headerlink" title="order"></a>order</h4><p>定义项目排列顺序，值为数值，越小排列越靠前</p>
+<h4 id="flex-grow"><a href="#flex-grow" class="headerlink" title="flex-grow"></a>flex-grow</h4><p>定义项目缩放比例，默认值为0<br>如果值为0，即使有空余空间也不放大<br>如果所有项目值为1，则平分空间<br>如果项目值分别为1、2、1，则按比例分配空间</p>
+<h4 id="flex-shrink"><a href="#flex-shrink" class="headerlink" title="flex-shrink"></a>flex-shrink</h4><p>定义项目缩小比例，默认值0<br>如果值为1，空间不足时项目将缩小<br>如果值为1、0、1，空间不足时值为0的项目不缩小</p>
+<h4 id="align-self"><a href="#align-self" class="headerlink" title="align-self"></a>align-self</h4><p>属性容许单个项目拥有与其他项目不同的对齐方式，可覆盖align-items属性</p>
+<hr>
+<p></p><p align="right"><br>By.Sunly<br>Hangzhou Fall<br></p><br><br><p></p>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://sunly.in/2015/10/08/css-3/" data-id="ciywxocpf000088ljh4oilmnq" class="article-share-link">分享到</a><div class="tags"><a href="/tags/学习笔记/">学习笔记</a><a href="/tags/CSS3/">CSS3</a></div><div class="post-nav"><a href="/2015/10/15/css-4/" class="pre">CSS3 学习笔记（3）</a><a href="/2015/09/19/css-2/" class="next">CSS3 学习笔记（2）</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Ingress/">Ingress</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/书籍/">书籍</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/学习笔记/">学习笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/blog/" style="font-size: 15px;">blog</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/Ingress/" style="font-size: 15px;">Ingress</a> <a href="/tags/IngressFS/" style="font-size: 15px;">IngressFS</a> <a href="/tags/投资/" style="font-size: 15px;">投资</a> <a href="/tags/书籍推荐/" style="font-size: 15px;">书籍推荐</a> <a href="/tags/markdown/" style="font-size: 15px;">markdown</a> <a href="/tags/VPS/" style="font-size: 15px;">VPS</a> <a href="/tags/搬瓦工/" style="font-size: 15px;">搬瓦工</a> <a href="/tags/net-speeder/" style="font-size: 15px;">net_speeder</a> <a href="/tags/vim-快捷键/" style="font-size: 15px;">vim 快捷键</a> <a href="/tags/HTTPS/" style="font-size: 15px;">HTTPS</a> <a href="/tags/fedora/" style="font-size: 15px;">fedora</a> <a href="/tags/chrome/" style="font-size: 15px;">chrome</a> <a href="/tags/ubuntu/" style="font-size: 15px;">ubuntu</a> <a href="/tags/chromium/" style="font-size: 15px;">chromium</a> <a href="/tags/http权威指南/" style="font-size: 15px;">http权威指南</a> <a href="/tags/HTTP报文/" style="font-size: 15px;">HTTP报文</a> <a href="/tags/学习笔记/" style="font-size: 15px;">学习笔记</a> <a href="/tags/链接管理/" style="font-size: 15px;">链接管理</a> <a href="/tags/HTML5/" style="font-size: 15px;">HTML5</a> <a href="/tags/CSS3/" style="font-size: 15px;">CSS3</a> <a href="/tags/url与资源/" style="font-size: 15px;">url与资源</a> <a href="/tags/MyEclipse/" style="font-size: 15px;">MyEclipse</a> <a href="/tags/contect-root/" style="font-size: 15px;">contect-root</a> <a href="/tags/javascript/" style="font-size: 15px;">javascript</a> <a href="/tags/web服务器/" style="font-size: 15px;">web服务器</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/02/08/http-webserver/">Web服务器</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/17/http-connection/">链接管理</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/15/http-message/">HTTP报文</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/15/http-url/">url与资源</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/26/edit-project-name/">MyEclipse2015/2016中修改web context-root</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/18/vim-hotkey/">vim基本操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/28/https-for-github-pages/">为Github Pages开启HTTPS</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/08/net-speed/">net_speeder安装及安装脚本</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/21/fedora-chrome/">Fedora 安装 chrome</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/16/ubuntu-chromium-video/">ubuntn下chromium不能播放视频</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">Sunly's Blog.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.	</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?2e6ea6bf2d3e6118ff0f6992a156c44f";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+  })();
+</script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
